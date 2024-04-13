@@ -72,25 +72,28 @@ section {
     transition: .3s;
     opacity: 0;
     animation: slidetop .5s ease forwards;
-    animation-delay: calc(.2s * var(--i));display: inline-block;
+    animation-delay: calc(.2s * var(--i));
+    display: inline-block;
 }
-@keyframes slideright
-{
+
+@keyframes slideright {
     0% {
         transform: translateX(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
     }
 }
-@keyframes slidetop
-{
+
+@keyframes slidetop {
     0% {
         transform: translateY(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -140,12 +143,13 @@ section {
     animation: slidebottom 1s ease forwards;
     animation-delay: .7s;
 }
-@keyframes slidebottom
-{
+
+@keyframes slidebottom {
     0% {
         transform: translateY(-100px);
         opacity: 0;
     }
+
     100% {
         transform: translateY(0px);
         opacity: 1;
@@ -175,12 +179,13 @@ span {
     animation: slideleft 1s ease forwards;
     animation-delay: 1s;
 }
-@keyframes slideleft
-{
+
+@keyframes slideleft {
     0% {
         transform: translateX(100px);
         opacity: 0;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 1;
@@ -370,7 +375,8 @@ span {
     color: rgb(211, 158, 11);
     font-weight: 900;
 }
-.portfolio-box .pf{
+
+.portfolio-box .pf {
     font-size: 5rem;
     color: rgb(255, 213, 3);
     font-weight: bolder;
@@ -400,6 +406,11 @@ span {
     background: var(--second-bg-color);
     min-height: auto;
     padding-bottom: 7rem;
+}
+
+.contact form a{
+    color: var(--main-color);
+    text-decoration: underline;
 }
 
 .contact h2 {
@@ -456,6 +467,16 @@ span {
     font-size: 1.6rem;
 }
 
+.footer-text a {
+    color: var(--text-color);
+    transition: .3s;
+}
+
+footer a:hover,
+footer a:active {
+    color: var(--main-color);
+}
+
 .footer-iconTop a {
     display: inline-flex;
     justify-content: center;
@@ -474,7 +495,6 @@ span {
     font-size: 2.4rem;
     color: var(--second-bg-color);
 }
-
 
 
 @media (max-width: 1200px) {
