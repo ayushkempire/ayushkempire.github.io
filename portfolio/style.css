@@ -371,19 +371,19 @@ span {
 }
 
 .portfolio-layer h4 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     color: rgb(211, 158, 11);
     font-weight: 900;
 }
 
 .portfolio-box .pf {
     font-size: 5rem;
-    color: rgb(255, 213, 3);
+    color: rgb(247, 42, 42);
     font-weight: bolder;
 }
 
 .portfolio-layer p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     margin: .3rem 0 1rem;
 }
 
