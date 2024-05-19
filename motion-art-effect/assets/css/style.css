@@ -580,7 +580,7 @@ body {
   background: #6219C0;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 699px) {
 
   .header .logo {
     padding: 10px;
@@ -796,7 +796,7 @@ body {
 }
 
 
-@media (min-width: 426px) and (max-width: 1024px) {
+@media (min-width: 700px) and (max-width: 1100px) {
 
   .header .logo {
     padding: 10px;
