@@ -26,13 +26,13 @@ body {
   color: #EEE5FF;
 }
 
-.motion-art-effect-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  z-index: -1;
+.motion-art-effect-canvas{
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+	z-index:-1;
 }
 
 .pad {
@@ -270,7 +270,7 @@ body {
   padding: 10px;
 }
 
-.s4 .d2 img {
+.s4 .d2 img{
   max-width: 100%;
 }
 
@@ -303,8 +303,7 @@ body {
   display: flex;
 }
 
-.s5 .box .d2 .card1,
-.s5 .box .d2 .card2 {
+.s5 .box .d2 .card1, .s5 .box .d2 .card2{
   width: 50%;
 }
 
@@ -505,15 +504,11 @@ body {
   border-width: 2px 2px 2px 2px;
 }
 
-.s7 .box .d2 .card1 .container1 .img,
-.s7 .box .d2 .card2 .container2 .img,
-.s7 .box .d2 .card3 .container3 .img {
+.s7 .box .d2 .card1 .container1 .img, .s7 .box .d2 .card2 .container2 .img, .s7 .box .d2 .card3 .container3 .img {
   margin: -20px 0px 20px -40px;
 }
 
-.s7 .box .d2 .card1 .container1 h2,
-.s7 .box .d2 .card2 .container2 h2,
-.s7 .box .d2 .card3 .container3 h2 {
+.s7 .box .d2 .card1 .container1 h2, .s7 .box .d2 .card2 .container2 h2, .s7 .box .d2 .card3 .container3 h2   {
   font-family: Sora;
   font-size: 23px;
   font-weight: 500;
@@ -521,9 +516,7 @@ body {
   margin: 0 0 10px 0;
 }
 
-.s7 .box .d2 .card1 .container1 .desc,
-.s7 .box .d2 .card2 .container2 .desc,
-.s7 .box .d2 .card3 .container3 .desc {
+.s7 .box .d2 .card1 .container1 .desc, .s7 .box .d2 .card2 .container2 .desc ,.s7 .box .d2 .card3 .container3 .desc {
   line-height: 30px;
   color: #EEE5FFBD;
   font-weight: 300;
@@ -569,8 +562,7 @@ body {
   margin: 0 15px;
 }
 
-::-moz-selection {
-  /* Code for Firefox */
+::-moz-selection { /* Code for Firefox */
   color: #FFFFFF;
   background: #6219C0;
 }
@@ -580,363 +572,345 @@ body {
   background: #6219C0;
 }
 
-@media (max-width: 699px) {
+@media (max-width: 425px){
 
-  .header .logo {
-    padding: 10px;
-    width: 50%;
-  }
+.header .logo {
+  padding: 10px;
+  width: 50%;
+}
 
-  .header .logo img {
-    max-width: 100%;
-  }
+.header .logo img{
+  max-width: 100%;
+}
 
-  .header .btn {
-    display: none;
-  }
+.header .btn{
+  display: none;
+}
 
-  .s2 {
-    flex-direction: column;
-    align-items: center;
-  }
+.s2{
+  flex-direction: column;
+  align-items: center;
+}
 
-  .s2 .sec-div1 {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
+.s2 .sec-div1 {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
 
-  .s2 .sec-div1 .container1 {
-    max-width: 196px;
-  }
+.s2 .sec-div1 .container1 {
+  max-width: 196px;
+}
 
-  .s2 .sec-div2 {
-    width: 100%;
-  }
+.s2 .sec-div2 {
+  width: 100%;
+}
 
-  .s2 .sec-div2 h1 {
-    font-size: 35px;
-    line-height: 55px;
-    text-align: center;
-  }
+.s2 .sec-div2 h1 {
+  font-size: 35px;
+  line-height: 55px;
+  text-align: center;
+}
 
-  .s2 .sec-div2 .d3 {
-    font-size: 16px;
-    line-height: 26px;
-    text-align: center;
-  }
+.s2 .sec-div2 .d3 {
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
 
-  .s2 .sec-div3 {
-    width: 100%;
-  }
+.s2 .sec-div3 {
+ width: 100%;
+}
 
-  .s3 {
-    padding: 10px 10px 40px 10px;
-  }
+.s3 {
+  padding: 10px 10px 40px 10px;
+}
 
-  .s3 .d2 {
-    flex-direction: column;
-  }
+.s3 .d2 {
+  flex-direction: column;
+}
 
-  .s3 .d2 .container1,
-  .s3 .d2 .container2,
-  .s3 .d2 .container3 {
-    width: 100%;
-    justify-content: center;
-  }
+.s3 .d2 .container1, .s3 .d2 .container2, .s3 .d2 .container3 {
+  width: 100%;
+  justify-content: center;
+}
 
-  .s3 .d2 .container2,
-  .s3 .d2 .container3 {
-    margin: 50px 0 0 0;
-  }
+.s3 .d2 .container2, .s3 .d2 .container3 {
+  margin: 50px 0 0 0;
+}
 
-  .s4 {
-    padding: 60px 0 0 0;
-    flex-direction: column;
-    align-items: center;
-  }
+.s4{
+  padding: 60px 0 0 0;
+  flex-direction: column;
+  align-items: center;
+}
 
-  .s4 .d1,
-  .s4 .d2 {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
-  }
+.s4 .d1, .s4 .d2 {
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+}
 
-  .s4 .d1 .container h2 {
-    font-size: 25px;
-    line-height: 45px;
-  }
+.s4 .d1 .container h2 {
+  font-size: 25px;
+  line-height: 45px;
+}
 
-  .s4 .d1 .container div {
-    font-size: 16px;
-    margin: 0;
-  }
+.s4 .d1 .container div {
+  font-size: 16px;
+  margin: 0;
+}
 
-  .s4 .d1 .btn {
-    padding: 20px;
-  }
+.s4 .d1 .btn {
+  padding: 20px;
+}
 
-  .s5 {
-    padding: 80px 0 0 0;
-  }
+.s5{
+  padding: 80px 0 0 0;
+}
 
-  .s5 .box .d1 {
-    width: 100%;
-    max-width: 100%;
-  }
+.s5 .box .d1 {
+  width: 100%;
+  max-width: 100%;
+}
 
-  .s5 .box .d1 h2 {
-    font-size: 25px;
-    line-height: 55px;
-  }
+.s5 .box .d1 h2 {
+  font-size: 25px;
+  line-height: 55px;
+}
 
-  .s5 .box .d2 {
-    flex-direction: column;
-  }
+.s5 .box .d2 {
+  flex-direction: column;
+}
 
-  .s5 .box .d2 .card1,
-  .s5 .box .d2 .card2 {
-    width: 100%;
-    text-align: center;
-  }
+.s5 .box .d2 .card1, .s5 .box .d2 .card2 {
+  width: 100%;
+  text-align: center;
+}
 
-  .s5 .box .d2 .card1 .container1 {
-    margin: 0;
-  }
+.s5 .box .d2 .card1 .container1 {
+  margin: 0;
+}
 
-  .s5 .box .d2 .card2 .container2 {
-    margin: 20px 0 0 0;
-  }
+.s5 .box .d2 .card2 .container2 {
+  margin: 20px 0 0 0;
+}
 
-  .s5 .box .d2 .card1 .container1 h2,
-  .s5 .box .d2 .card2 .container2 h2 {
-    font-size: 20px;
-    line-height: 40px;
-  }
+.s5 .box .d2 .card1 .container1 h2, .s5 .box .d2 .card2 .container2 h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
 
-  .s5 .box .d2 .card1 .container1 .desc,
-  .s5 .box .d2 .card2 .container2 .desc {
-    font-size: 16px;
-  }
+.s5 .box .d2 .card1 .container1 .desc, .s5 .box .d2 .card2 .container2 .desc {
+  font-size: 16px;
+}
 
-  .s6 h2 {
-    font-size: 20px;
-    line-height: 40px;
-  }
+.s6 h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
 
-  .s6 .desc {
-    max-width: 100%;
-    width: 100%;
-  }
+.s6 .desc {
+  max-width: 100%;
+  width: 100%;
+}
 
-  .s7 {
-    padding: 30px 0 0 0;
-  }
+.s7{
+  padding: 30px 0 0 0;
+}
 
-  .s7 .box .d1 {
-    width: 100%;
-  }
+.s7 .box .d1 {
+  width: 100%;
+}
 
-  .s7 .box .d1 h2 {
-    font-size: 25px;
-    line-height: 45px;
-  }
+.s7 .box .d1 h2{
+  font-size: 25px;
+  line-height: 45px;
+}
 
-  .s7 .box .d1 div {
-    font-size: 16px;
-    margin: 0;
-  }
+.s7 .box .d1 div {
+  font-size: 16px;
+  margin: 0;
+}
 
-  .s7 .box .d2 {
-    padding: 30px 0 0 0;
-    flex-direction: column;
-  }
+.s7 .box .d2 {
+  padding: 30px 0 0 0;
+  flex-direction: column;
+}
 
-  .s7 .box .d2 .card1,
-  .s7 .box .d2 .card2,
-  .s7 .box .d2 .card3 {
-    width: 100%;
-  }
+.s7 .box .d2 .card1, .s7 .box .d2 .card2, .s7 .box .d2 .card3 {
+  width: 100%;
+}
 
-  .s7 .box .d2 .card1 .container1 {
-    margin: 0;
-  }
+.s7 .box .d2 .card1 .container1 {
+  margin: 0;
+}
 
-  .s7 .box .d2 .card2 .container2,
-  .s7 .box .d2 .card3 .container3 {
-    margin: 20px 0 0 0;
-  }
+.s7 .box .d2 .card2 .container2, .s7 .box .d2 .card3 .container3{
+  margin: 20px 0 0 0;
+}
 
-  .s7 .box .d2 .card1 .container1 h2,
-  .s7 .box .d2 .card2 .container2 h2,
-  .s7 .box .d2 .card3 .container3 h2 {
-    font-size: 20px;
-  }
+.s7 .box .d2 .card1 .container1 h2, .s7 .box .d2 .card2 .container2 h2, .s7 .box .d2 .card3 .container3 h2 {
+  font-size: 20px;
+}
 
-  .s7 .box .d2 .card1 .container1 .desc,
-  .s7 .box .d2 .card2 .container2 .desc,
-  .s7 .box .d2 .card3 .container3 .desc {
-    font-size: 16px;
-  }
+.s7 .box .d2 .card1 .container1 .desc, .s7 .box .d2 .card2 .container2 .desc, .s7 .box .d2 .card3 .container3 .desc {
+  font-size: 16px;
+}
 
-  .s8 .d1,
-  .s8 .d2 {
-    width: 100%;
-  }
+.s8 .d1, .s8 .d2{
+  width: 100%;
+}
 
-  .s8 .d1 {
-    text-align: center;
-  }
+.s8 .d1{
+  text-align: center;
+}
 
-  .s8 .d2 {
-    justify-content: center;
-  }
+.s8 .d2{
+  justify-content: center;
+}
 
 }
 
 
-@media (min-width: 700px) and (max-width: 1100px) {
+@media (min-width: 426px) and (max-width: 1024px){
 
-  .header .logo {
-    padding: 10px;
-  }
+.header .logo {
+  padding: 10px;
+}
 
 
-  .s2 .sec-div1 .container1 {
-    max-width: 156px;
-  }
+.s2 .sec-div1 .container1 {
+  max-width: 156px;
+}
 
-  .s2 .sec-div2 h1 {
-    font-size: 40px;
-    line-height: 60px;
-  }
+.s2 .sec-div2 h1 {
+  font-size: 40px;
+  line-height: 60px;
+}
 
-  .s3 .d2 .container1 {
-    width: 50%;
-    justify-content: center;
-  }
+.s3 .d2 .container1 {
+  width: 50%;
+  justify-content: center;
+}
 
-  .s3 .d2 .container2 {
-    width: 50%;
-  }
+.s3 .d2 .container2 {
+  width: 50%;
+}
 
-  .s3 .d2 .container3 {
-    width: 100%;
-    justify-content: center;
-    margin: 50px 0 0 0;
-  }
+.s3 .d2 .container3 {
+  width: 100%;
+  justify-content: center;
+  margin: 50px 0 0 0;
+}
 
-  .pad3 {
-    padding: 0 0 50px 0;
-  }
+.pad3{
+ padding: 0 0 50px 0;
+}
 
-  .s4 {
-    padding: 60px 0 0 0;
-  }
+.s4 {
+  padding: 60px 0 0 0;
+}
 
-  .s4 .d1 .container h2 {
-    font-size: 30px;
-    line-height: 50px;
-  }
+.s4 .d1 .container h2{
+  font-size: 30px;
+  line-height: 50px;
+}
 
-  .s4 .d1 .container div {
-    margin: 0;
-  }
+.s4 .d1 .container div {
+  margin: 0;
+}
 
-  .s5 {
-    padding: 80px 0 0 0;
-  }
+.s5{
+  padding: 80px 0 0 0;
+}
 
-  .s5 .box .d1 h2 {
-    font-size: 30px;
-    line-height: 50px;
-  }
+.s5 .box .d1 h2 {
+  font-size: 30px;
+  line-height: 50px;
+}
 
-  .s5 .box .d2 .card1 .container1 h2 {
-    font-size: 20px;
-    line-height: 40px;
-  }
+.s5 .box .d2 .card1 .container1 h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
 
-  .s5 .box .d2 .card2 .container1 h2 {
-    font-size: 20px;
-    line-height: 40px;
-  }
+.s5 .box .d2 .card2 .container1 h2 {
+  font-size: 20px;
+  line-height: 40px;
+}
 
-  .s6 .desc {
-    max-width: 427px;
-  }
+.s6 .desc{
+  max-width: 427px;
+}
 
-  .s7 .box .d1 h2 {
-    font-size: 30px;
-    line-height: 50px;
-  }
+.s7 .box .d1 h2 {
+  font-size: 30px;
+  line-height: 50px;
+}
 
-  .s7 .box .d1 div {
-    margin: 0;
-  }
+.s7 .box .d1 div{
+  margin: 0;
+}
 
-  .s7 .box .d2 .card1 {
-    width: 50%;
-  }
+.s7 .box .d2 .card1 {
+  width: 50%;
+}
 
-  .s7 .box .d2 .card2 {
-    width: 50%;
-  }
+.s7 .box .d2 .card2 {
+  width: 50%;
+}
 
-  .s7 .box .d2 .card3 {
-    width: 100%;
-  }
+.s7 .box .d2 .card3 {
+  width: 100%;
+}
 
-  .s8 .d1,
-  .s8 .d2 {
-    width: 100%;
-  }
+.s8 .d1, .s8 .d2{
+  width: 100%;
+}
 
-  .s8 .d1 {
-    text-align: center;
-  }
+.s8 .d1{
+  text-align: center;
+}
 
-  .s8 .d2 {
-    justify-content: center;
-  }
+.s8 .d2{
+  justify-content: center;
+}
 
 }
 
 @media (min-width: 1440px) {
 
-  .s2 .sec-div1 .container1 {
-    max-width: 150px;
-  }
+.s2 .sec-div1 .container1 {
+  max-width: 150px;
+}
 
-  .s2 .sec-div2 h1 {
-    font-size: 65px;
-    line-height: 85px;
-  }
+.s2 .sec-div2 h1 {
+  font-size: 65px;
+  line-height: 85px;
+}
 
-  .s2 .sec-div2 .d3 {
-    margin: 0 100px 0 0;
-  }
+.s2 .sec-div2 .d3 {
+  margin: 0 100px 0 0;
+}
 
-  .s4 .d1 .container h2 {
-    font-size: 40px;
-    line-height: 60px;
-  }
+.s4 .d1 .container h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
 
-  .s5 .box .d1 h2 {
-    font-size: 40px;
-    line-height: 60px;
-  }
+.s5 .box .d1 h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
 
-  .s7 .box .d1 h2 {
-    font-size: 40px;
-    line-height: 60px;
-  }
+.s7 .box .d1 h2 {
+  font-size: 40px;
+  line-height: 60px;
+}
 
-  .s7 .box .d2 .card1 .container1 h2,
-  .s7 .box .d2 .card2 .container2 h2,
-  .s7 .box .d2 .card3 .container3 h2 {
-    font-size: 25px;
-  }
+.s7 .box .d2 .card1 .container1 h2, .s7 .box .d2 .card2 .container2 h2, .s7 .box .d2 .card3 .container3 h2 {
+  font-size: 25px;
+}
 
 }
