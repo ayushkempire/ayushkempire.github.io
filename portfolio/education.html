@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kapoor</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+            border: none;
+            outline: none;
+            scroll-behavior: smooth;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        :root {
+            --bg-color: black;
+            --text-color: white;
+            --main-color: rgb(207, 153, 54);
+            --card-bg-color: #222;
+            --shadow-color: rgba(0, 0, 0, 0.5);
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+
+        .education {
+            padding: 2rem;
+            text-align: center;
+            background-color: var(--bg-color);
+        }
+
+        .education h2 {
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--text-color);
+
+        }
+
+        span {
+            color: var(--main-color);
+        }
+
+        .education-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            justify-content: center;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        .education-item {
+            background-color: var(--card-bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px var(--shadow-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: left;
+        }
+
+        .education-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 10px var(--main-color);
+        }
+
+        .education-item img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 1rem;
+        }
+
+        .education-item h3 {
+            font-size: 1.5rem;
+            color: var(--main-color);
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+
+        .education-item p {
+            font-size: 1rem;
+            margin: 0.3rem 0;
+        }
+
+        .education-item .degree {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .education-item .location,
+        .education-item .duration {
+            font-style: italic;
+            color: #aaa;
+            margin-bottom: 20px;
+        }
+
+        .duration {
+            text-align: center;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .education h2 {
+                font-size: 2rem;
+            }
+
+            .education-container {
+                grid-template-columns: 1fr;
+            }
+
+            .education-item {
+                padding: 0.8rem;
+            }
+
+            .education-item h3 {
+                font-size: 1.2rem;
+            }
+
+            .education-item p {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .education h2 {
+                font-size: 1.8rem;
+            }
+
+            .education-item h3 {
+                font-size: 1rem;
+            }
+
+            .education-item p {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="education">
+        <h2>My <span>Education</span></h2>
+        <div class="education-container">
+            <!-- Lovely Professional University -->
+            <div class="education-item">
+                <img src="images/lpu.png" alt="Lovely Professional University Logo">
+                <h3>Lovely Professional University</h3>
+                <p class="duration">Since August 2023</p>
+                <p class="degree">Master of Computer Application</p>
+                <p><strong>CGPA:</strong> 8.41</p>
+                <p class="location">Phagwara (P.B), India</p>
+            </div>
+
+            <div class="education-item">
+                <img src="images/gcLogo.png" alt="Government College Dharamshala Logo">
+                <h3>Government College Dharamshala</h3>
+                <p class="duration">August 2020 - July 2023</p>
+                <p class="degree">Bachelor of Computer Application</p>
+                <p><strong>CGPA:</strong> 8.14</p>
+                <p class="location">Dharamshala (H.P), India</p>
+            </div>
+
+            <div class="education-item">
+                <img src="images/PWS logo.webp" alt="Partap World School Logo">
+                <h3>Partap World School Indora</h3>
+                <p class="duration">April 2019 - March 2020</p>
+                <p class="degree">Intermediate</p>
+                <p><strong>Percentage:</strong> 77%</p>
+                <p class="location">Indora (H.P), India</p>
+            </div>
+
+            <div class="education-item">
+                <img src="images/PWS logo.webp" alt="Partap World School Logo">
+                <h3>Partap World School Indora</h3>
+                <p class="duration">April 2019 - March 2020</p>
+                <p class="degree">Matriculation</p>
+                <p><strong>Percentage:</strong> 79%</p>
+                <p class="location">Indora (H.P), India</p>
+            </div>
+        </div>
+    </section>
+</body>
+
+</html>
