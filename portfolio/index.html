@@ -263,7 +263,7 @@
          </div>
          <div class="project-box">
             <h4>Portfolio Website</h4>
-            <p>Sleek portfolio showcasing creativity, skills, projects and certifications effectively.</p>
+            <p>Sleek portfolio showcasing creativity, skills, and achievements effectively.</p>
             <div class="project-layer">
                <a href="https://ayushkempire.github.io/portfolio/" target="_blank"><i class='bx bx-link-external'></i>
                   View Project</a>
@@ -333,17 +333,17 @@
       <h2 class="heading">Contact <span>Me!</span></h2>
       <form action="#">
          <div class="input-box">
-            <input type="text" placeholder="Full Name">
-            <input type="email" placeholder="Email Address">
+            <input type="text" placeholder="Full Name" id="name" name="name" required>
+            <input type="email" placeholder="Email Address" id="email" name="email" required>
          </div>
          <div class="input-box">
             <input type="tel" placeholder="Mobile Number" id="phone" pattern="[0-9]{10}" maxlength="10">
-            <input type="text" placeholder="Subject">
+            <input type="text" placeholder="Subject" id="subject" name="subject" required>
          </div>
-         <textarea name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+         <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
          <p class="priv">Read our <a href="privacy-policy.html">Privacy Policy</a> to understand how we handle your
             data.<br></p>
-         <input type="submit" value="Send Message" class="btn">
+         <button type="submit" value="Send Message" class="btn">Send Message</button>
       </form>
    </section>
    <footer class="footer">
@@ -358,7 +358,11 @@
    </footer>
    <script src="https://unpkg.com/scrollreveal"></script>
    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+   <script src="https://smtpjs.com/v3/smtp.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
    <script src="script.js"></script>
+
 </body>
 
 </html>
