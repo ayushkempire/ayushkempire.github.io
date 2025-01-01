@@ -1,64 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Ayush Kapoor</title>
-   <link rel="icon" href="favicon.ico">
-   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-   <link rel="stylesheet" href="style.css">
-</head>
-
-<body>
-   <header class="header">
-      <a href="" class="logo">My Portfolio</a>
-      <div class='bx bx-menu' id="menu-icon"></div>
-      <nav class="navbar">
-         <a href="#home" class="active" style="--i:1;">Home</a>
-         <a href="#about" style="--i:2;">About</a>
-         <a href="#skills" style="--i:3;">Skills</a>
-         <a href="#services" style="--i:4;">Services</a>
-         <a href="#projects" style="--i:5;">Projects</a>
-         <a href="#certifications" style="--i:6;">Certifications</a>
-         <a href="#contact" style="--i:7;">Contact</a>
-      </nav>
-   </header>
-   <section class="home" id="home">
-      <div class="home-content">
-         <h3>Greetings !!!</h3>
-         <h1>I'm <span>Ayush Kapoor</span></h1>
-         <h3>And I'm a <span class="multiple-text"></span></h3>
-         <p>Passionate front-end developer skilled in HTML, CSS, JavaScript. Creative problem solver, committed to
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ayush Kapoor</title>
+    <link rel="icon" href="favicon.ico">
+    <style>
+      body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+      #preloader {
+      text-align: center;
+      color: white;
+      font-family: 'Courier New', Courier, monospace;
+      font-size: 3em;
+      font-weight: bolder;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      animation: fadeInOut 2.5s ease-in-out infinite;
+      text-shadow: -2px -2px 0 rgb(207, 153, 54), 2px 3px 0 rgb(207, 153, 54);
+      }
+      #preloader span {
+      font-size: 2rem;
+      text-shadow: -2px -2px 0 rgb(207, 153, 54), 2px 3px 0 rgb(253, 0, 0);
+      }
+      #content{
+      opacity: 0;
+      height:0;
+      }
+      @keyframes fadeInOut {
+      0%, 100% {
+      opacity: 0;
+      }
+      50% {
+      opacity: 1;
+      }
+      }
+    </style>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body id = "body">
+    <div id="preloader">
+    </div>
+    <div id="content">
+      <header class="header">
+        <a href="" class="logo">My Portfolio</a>
+        <div class='bx bx-menu' id="menu-icon"></div>
+        <nav class="navbar">
+          <a href="#home" class="active" style="--i:1;">Home</a>
+          <a href="#about" style="--i:2;">About</a>
+          <a href="#skills" style="--i:3;">Skills</a>
+          <a href="#services" style="--i:4;">Services</a>
+          <a href="#projects" style="--i:5;">Projects</a>
+          <a href="#certifications" style="--i:6;">Certifications</a>
+          <a href="#contact" style="--i:7;">Contact</a>
+        </nav>
+      </header>
+      <section class="home" id="home">
+        <div class="home-content">
+          <h3>Greetings !!!</h3>
+          <h1>I'm <span>Ayush Kapoor</span></h1>
+          <h3>And I'm a <span class="multiple-text"></span></h3>
+          <p>Passionate front-end developer skilled in HTML, CSS, JavaScript. Creative problem solver, committed to
             crafting intuitive user experiences.
-         </p>
-         <div class="social-media">
+          </p>
+          <div class="social-media">
             <a href="tel:+91-8626805949" style="--i:6;" target="_blank"><i class='bx bx-phone-call'></i></a>
             <a href="mailto:ak5303858@gmail.com" style="--i:7;" target="_blank"><i class='bx bxl-gmail'></i></a>
             <a href=" https://wa.me/qr/V2YXFHJKITVKI1" style="--i:8;" target="_blank"><i
-                  class='bx bxl-whatsapp'></i></a>
+              class='bx bxl-whatsapp'></i></a>
             <a href="https://twitter.com/ayushk_empire_" style="--i:9;" target="_blank"><i
-                  class='bx bxl-twitter'></i></a>
+              class='bx bxl-twitter'></i></a>
             <a href="https://www.linkedin.com/in/ayushkempire" style="--i:10;" target="_blank"><i
-                  class='bx bxl-linkedin'></i></a>
+              class='bx bxl-linkedin'></i></a>
             <a href="https://github.com/ayushkempire" style="--i:11;" target="_blank"><i class='bx bxl-github'></i></a>
             <a href="https://www.instagram.com/ayushk_empire_/" style="--i:12;" target="_blank"><i
-                  class='bx bxl-instagram'></i></a>
-         </div>
-         <a href="Resume.pdf" class="btn" target="_blank">Download My CV</a>
-      </div>
-      <div class="home-img">
-         <img src="images/img.png" alt="Profile">
-      </div>
-   </section>
-   <section class="about" id="about">
-      <div class="about-img">
-         <img src="images/about.png" alt="">
-      </div>
-      <div class="about-content">
-         <h2 class="heading">About <span>Me</span></h2>
-         <p>" Hello! I'm Ayush Kapoor from Indora, a beautiful town situated in the Kangra district of Himachal Pradesh.
+              class='bx bxl-instagram'></i></a>
+          </div>
+          <a href="Resume.pdf" class="btn" target="_blank">Download My CV</a>
+        </div>
+        <div class="home-img">
+          <img src="images/img.png" alt="Profile">
+        </div>
+      </section>
+      <section class="about" id="about">
+        <div class="about-img">
+          <img src="images/about.png" alt="">
+        </div>
+        <div class="about-content">
+          <h2 class="heading">About <span>Me</span></h2>
+          <p>" Hello! I'm Ayush Kapoor from Indora, a beautiful town situated in the Kangra district of Himachal Pradesh.
             <br><br>
             I'm a passionate and dedicated software developer with a love for creating innovative web applications. My
             journey in the tech world began with a fascination for how things work, which led me to explore various
@@ -72,297 +113,330 @@
             <br><br>
             I believe in the power of collaboration and am always eager to connect with like-minded individuals who
             share a passion for technology and creativity."
-         </p>
-         <a href="education.html" class="btn" target="_blank">Education Qualification</a>
-      </div>
-   </section>
-   <section class="skills" id="skills">
-      <h2 class="heading">My <span>Skills</span></h2>
-      <div class="skills-container">
-         <div class="skills-category">
+          </p>
+          <a href="education.html" class="btn" target="_blank">Education Qualification</a>
+        </div>
+      </section>
+      <section class="skills" id="skills">
+        <h2 class="heading">My <span>Skills</span></h2>
+        <div class="skills-container">
+          <div class="skills-category">
             <h3>Programming Languages</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>C</h4>
-                  <div class="skill-hover"><span>90%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>C++</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Java</h4>
-                  <div class="skill-hover"><span>80%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Python</h4>
-                  <div class="skill-hover"><span>95%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>C</h4>
+                <div class="skill-hover"><span>90%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>C++</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Java</h4>
+                <div class="skill-hover"><span>80%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Python</h4>
+                <div class="skill-hover"><span>95%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Front-End Technologies</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>HTML5</h4>
-                  <div class="skill-hover"><span>98%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>CSS3</h4>
-                  <div class="skill-hover"><span>90%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>JavaScript</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>ReactJS</h4>
-                  <div class="skill-hover"><span>75%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>HTML5</h4>
+                <div class="skill-hover"><span>98%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>CSS3</h4>
+                <div class="skill-hover"><span>90%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>JavaScript</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>ReactJS</h4>
+                <div class="skill-hover"><span>75%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Backend Technologies</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>PHP</h4>
-                  <div class="skill-hover"><span>70%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>PHP</h4>
+                <div class="skill-hover"><span>70%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Frameworks</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>Bootstrap</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Tailwind CSS</h4>
-                  <div class="skill-hover"><span>80%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>.NET</h4>
-                  <div class="skill-hover"><span>70%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>Bootstrap</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Tailwind CSS</h4>
+                <div class="skill-hover"><span>80%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>.NET</h4>
+                <div class="skill-hover"><span>70%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>AI Models</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>ANN</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>CNN</h4>
-                  <div class="skill-hover"><span>75%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>RNN</h4>
-                  <div class="skill-hover"><span>70%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Bag of Words</h4>
-                  <div class="skill-hover"><span>80%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>ANN</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>CNN</h4>
+                <div class="skill-hover"><span>75%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>RNN</h4>
+                <div class="skill-hover"><span>70%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Bag of Words</h4>
+                <div class="skill-hover"><span>80%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Testing</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>Manual Testing</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Automation Testing</h4>
-                  <div class="skill-hover"><span>75%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Selenium</h4>
-                  <div class="skill-hover"><span>70%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>Manual Testing</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Automation Testing</h4>
+                <div class="skill-hover"><span>75%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Selenium</h4>
+                <div class="skill-hover"><span>70%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Platforms</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>Linux (RedHat)</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Windows</h4>
-                  <div class="skill-hover"><span>75%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>macOS</h4>
-                  <div class="skill-hover"><span>70%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>Linux (RedHat)</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Windows</h4>
+                <div class="skill-hover"><span>75%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>macOS</h4>
+                <div class="skill-hover"><span>70%</span></div>
+              </div>
             </div>
-         </div>
-         <div class="skills-category">
+          </div>
+          <div class="skills-category">
             <h3>Other Skills</h3>
             <div class="skills-grid">
-               <div class="skill-box">
-                  <h4>Leadership</h4>
-                  <div class="skill-hover"><span>95%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Communication</h4>
-                  <div class="skill-hover"><span>90%</span></div>
-               </div>
-               <div class="skill-box">
-                  <h4>Creativity</h4>
-                  <div class="skill-hover"><span>85%</span></div>
-               </div>
+              <div class="skill-box">
+                <h4>Leadership</h4>
+                <div class="skill-hover"><span>95%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Communication</h4>
+                <div class="skill-hover"><span>90%</span></div>
+              </div>
+              <div class="skill-box">
+                <h4>Creativity</h4>
+                <div class="skill-hover"><span>85%</span></div>
+              </div>
             </div>
-         </div>
-      </div>
-   </section>
-   <section class="services" id="services">
-      <h2 class="heading">My <span>Services</span></h2>
-      <div class="services-container">
-         <div class="services-box">
+          </div>
+        </div>
+      </section>
+      <section class="services" id="services">
+        <h2 class="heading">My <span>Services</span></h2>
+        <div class="services-container">
+          <div class="services-box">
             <i class='bx bx-code-alt'></i>
             <h3>Web Development</h3>
             <p>Proficient web developer skilled in HTML, CSS, JavaScript. Passionate about creating responsive,
-               user-friendly websites with modern design and functionality.
+              user-friendly websites with modern design and functionality.
             </p>
             <a href="#" class="btn">Read More</a>
-         </div>
-         <div class="services-box">
+          </div>
+          <div class="services-box">
             <i class='bx bxs-paint'></i>
             <h3>Graphic Design</h3>
             <p>Creative graphic designer skilled in Adobe Suite, with a passion for crafting visually compelling
-               designs that captivate audiences effectively.
+              designs that captivate audiences effectively.
             </p>
             <a href="#" class="btn">Read More</a>
-         </div>
-         <div class="services-box">
+          </div>
+          <div class="services-box">
             <i class='bx bx-video'></i>
             <h3>Audio-Video Editing</h3>
             <p>Experienced audio-video editor proficient in industry-standard software. Dedicated to delivering
-               high-quality productions with precision, creativity, and attention to detail.
+              high-quality productions with precision, creativity, and attention to detail.
             </p>
             <a href="#" class="btn">Read More</a>
-         </div>
-      </div>
-   </section>
-   <section class="projects" id="projects">
-      <h2 class="heading">Latest <span>Projects</span></h2>
-      <div class="project-container">
-         <div class="project-box">
+          </div>
+        </div>
+      </section>
+      <section class="projects" id="projects">
+        <h2 class="heading">Latest <span>Projects</span></h2>
+        <div class="project-container">
+          <div class="project-box">
             <h4>Music Streaming Platform</h4>
             <p>Experience music like never before with our platform inspired by Spotify (For educational purpose only).
-               Discover, stream, and enjoy your favorite tunes anytime, anywhere.</p>
+              Discover, stream, and enjoy your favorite tunes anytime, anywhere.
+            </p>
             <div class="project-layer">
-               <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
+              <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
             </div>
-         </div>
-         <div class="project-box">
+          </div>
+          <div class="project-box">
             <h4>Portfolio Website</h4>
             <p>Sleek portfolio showcasing creativity, skills, and achievements effectively.</p>
             <div class="project-layer">
-               <a href="https://ayushkempire.github.io/portfolio/" target="_blank"><i class='bx bx-link-external'></i>
-                  View Project</a>
+              <a href="https://ayushkempire.github.io/portfolio/" target="_blank"><i class='bx bx-link-external'></i>
+              View Project</a>
             </div>
-         </div>
-         <div class="project-box">
+          </div>
+          <div class="project-box">
             <h4>Educational Website</h4>
             <p>Educational website inspired by BYJU'S (For educational purpose only), fostering interactive learning
-               experiences.</p>
+              experiences.
+            </p>
             <div class="project-layer">
-               <a href="https://byjus-clone.netlify.app/" target="_blank"><i class='bx bx-link-external'></i> View
-                  Project</a>
+              <a href="https://byjus-clone.netlify.app/" target="_blank"><i class='bx bx-link-external'></i> View
+              Project</a>
             </div>
-         </div>
-         <div class="project-box">
+          </div>
+          <div class="project-box">
             <h4>Video Streaming Platform</h4>
             <p>Experience the ultimate streaming experience with our video streaming platform inspired by Netflix (For
-               educational purpose only).</p>
+              educational purpose only).
+            </p>
             <div class="project-layer">
-               <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
+              <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
             </div>
-         </div>
-         <div class="project-box">
+          </div>
+          <div class="project-box">
             <h4>Gym Website</h4>
             <p>Dynamic gym website: schedules, services, trainers, and membership details.</p>
             <div class="project-layer">
-               <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
+              <a href="#" target="_blank"><i class='bx bx-link-external'></i> View Project</a>
             </div>
-         </div>
-
-      </div>
-   </section>
-   <section class="certification" id="certifications">
-      <h2 class="heading">My <span>Certifications</span></h2>
-      <div class="certifications-container">
-         <div class="certification-box">
+          </div>
+        </div>
+      </section>
+      <section class="certification" id="certifications">
+        <h2 class="heading">My <span>Certifications</span></h2>
+        <div class="certifications-container">
+          <div class="certification-box">
             <h3><span class="certname">Frontend Development</span> - Gokburu Tech Pvt Ltd - <span>July 2024</span></h3>
             <a href="https://drive.google.com/file/d/1iVzo_hi8X6mY5WQ7XUO0ccJjKyfVGxBa/view?usp=drive_link"
-               target="_blank" class="btn">View Certificate</a>
-         </div>
-         <div class="certification-box">
+              target="_blank" class="btn">View Certificate</a>
+          </div>
+          <div class="certification-box">
             <h3><span class="certname">Software Engineering</span> - Saylor Academy - <span>Feb 2024</span></h3>
             <a href="https://learn.saylor.org/pluginfile.php/1/tool_certificate/issues/1706803143/7558428641AK.pdf"
-               target="_blank" class="btn">View Certificate</a>
-         </div>
-         <div class="certification-box">
+              target="_blank" class="btn">View Certificate</a>
+          </div>
+          <div class="certification-box">
             <h3><span class="certname">Web Development</span> - Himachal Pradesh Kaushal Vikas Nigam - <span>July
-                  2023</span></h3>
+              2023</span>
+            </h3>
             <a href="https://admin.skillindiadigital.gov.in/documentverificationbyQR?Candidate%20Name=Ayush%20kapoor&Candidate%20ID=CAN_19600741&Sector%20Name=IT-ITeS&QP%20Name=Web%20Developer&QP%20Code=SSC%2FQ0503&Result=PASS&Document=certificate&Issuance%20Date=22%2F07%2F2023"
-               target="_blank" class="btn">View Certificate</a>
-         </div>
-         <div class="certification-box">
+              target="_blank" class="btn">View Certificate</a>
+          </div>
+          <div class="certification-box">
             <h3><span class="certname">Legacy JavaScript Algorithms and Data Structures</span> - freeCodeCamp.org -
-               <span>June 2023</span>
+              <span>June 2023</span>
             </h3>
             <a href="https://www.freecodecamp.org/certification/ayushk_empire_/javascript-algorithms-and-data-structures"
-               target="_blank" class="btn">View Certificate</a>
-         </div>
-         <div class="certification-box">
+              target="_blank" class="btn">View Certificate</a>
+          </div>
+          <div class="certification-box">
             <h3><span class="certname">Responsive Web Design</span> - freeCodeCamp.org - <span>Feb 2023</span></h3>
             <a href="https://www.freecodecamp.org/certification/ayushk_empire_/responsive-web-design" target="_blank"
-               class="btn">View Certificate</a>
-         </div>
-      </div>
-   </section>
-   <section class="contact" id="contact">
-      <h2 class="heading">Contact <span>Me!</span></h2>
-      <form action="#">
-         <div class="input-box">
+              class="btn">View Certificate</a>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="contact">
+        <h2 class="heading">Contact <span>Me!</span></h2>
+        <form action="#">
+          <div class="input-box">
             <input type="text" placeholder="Full Name" id="name" name="name" required>
             <input type="email" placeholder="Email Address" id="email" name="email" required>
-         </div>
-         <div class="input-box">
+          </div>
+          <div class="input-box">
             <input type="tel" placeholder="Mobile Number" id="phone" pattern="[0-9]{10}" maxlength="10">
             <input type="text" placeholder="Subject" id="subject" name="subject" required>
-         </div>
-         <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-         <p class="priv">Read our <a href="privacy-policy.html">Privacy Policy</a> to understand how we handle your
-            data.<br></p>
-         <button type="submit" value="Send Message" class="btn">Send Message</button>
-      </form>
-   </section>
-   <footer class="footer">
-      <div class="footer-text">
-         <p>Copyright &copy; 2025 by ayushk_empire | All Rights Reserved. | <a href="tnc.html">Terms & Conditions</a> |
+          </div>
+          <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+          <p class="priv">Read our <a href="privacy-policy.html">Privacy Policy</a> to understand how we handle your
+            data.<br>
+          </p>
+          <button type="submit" value="Send Message" class="btn">Send Message</button>
+        </form>
+      </section>
+      <footer class="footer">
+        <div class="footer-text">
+          <p>Copyright &copy; 2025 by ayushk_empire | All Rights Reserved. | <a href="tnc.html">Terms & Conditions</a> |
             <a href="privacy-policy.html">Privacy Policy</a>
-         </p>
-      </div>
-      <div class="footer-iconTop">
-         <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
-      </div>
-   </footer>
-   <script src="https://unpkg.com/scrollreveal"></script>
-   <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-
-   <script src="https://smtpjs.com/v3/smtp.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-   <script src="script.js"></script>
-
-</body>
-
+          </p>
+        </div>
+        <div class="footer-iconTop">
+          <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+      </footer>
+    </div>
+    <script>
+      const body = document.getElementById('body');
+            const preloader = document.getElementById('preloader');
+            const content = document.getElementById('content');
+      
+            const textSequence = [
+                "Welcome to my Portfolio\nExplore the journey\n                      - <span>Ayush Kapoor</span>",
+                "Hold on...",
+                "Let's go!"
+            ];
+      
+            let index = 0;
+      
+            function displaySequence() {
+                if (index < textSequence.length) {
+                    preloader.innerHTML = textSequence[index];
+                    preloader.style.animation = "fadeInOut 2.5s ease-in-out infinite";
+                    index++;
+                    setTimeout(displaySequence, 2500);
+                } else {
+      		body.style.display = 'block';
+                    preloader.style.display = 'none';
+                    content.style.opacity = '1';
+      		content.style.height = 'unset';
+                }
+            }
+            window.addEventListener('load', () => {
+                displaySequence();
+            });
+        
+    </script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="script.js"></script>
+  </body>
 </html>
