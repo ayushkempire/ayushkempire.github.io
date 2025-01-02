@@ -7,11 +7,62 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Ayush Kapoor</title>
    <link rel="icon" href="favicon.ico">
+   <style>
+		body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            background-color: black;
+            display: flex;
+			flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        #preloader {
+            text-align: center;
+			width: 90%;
+            color: white;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 5em;
+            font-weight: bolder;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            transition: opacity 1.6s ease-in-out;
+            text-shadow: -2px -2px 0 rgb(207, 153, 54), 2px 3px 0 rgb(207, 153, 54);
+        }
+
+        #preloader span {
+            font-size: 2rem;
+            text-shadow: -2px -2px 0 rgb(207, 153, 54), 2px 3px 0 rgb(253, 0, 0);
+
+        }
+		
+		#content{
+			opacity: 0;
+			height:0;
+			overflow: hidden;
+			transition: opacity 1.6s ease-in-out;
+		}
+
+        @keyframes fadeInOut {
+            0%, 100% {
+                opacity: 0;
+            }
+            50% {
+                opacity: 1;
+            }
+        }
+    </style>
    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
    <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body id = "body">
+	<div id="preloader">
+	</div>
+	
+	<div id="content">
    <header class="header">
       <a href="" class="logo">My Portfolio</a>
       <div class='bx bx-menu' id="menu-icon"></div>
@@ -356,6 +407,44 @@
          <a href="#home"><i class='bx bx-up-arrow-alt'></i></a>
       </div>
    </footer>
+   </div>
+   <script>
+		const body = document.getElementById('body');
+        const preloader = document.getElementById('preloader');
+        const content = document.getElementById('content');
+
+        const textSequence = [
+            "Welcome to my Portfolio\nExplore the journey\n                      - <span>Ayush Kapoor</span>",
+            "Hold on...",
+            "Let's go!"
+        ];
+
+        let index = 0;
+
+        function displaySequence() {
+            if (index < textSequence.length) {
+                preloader.innerHTML = textSequence[index];
+                preloader.style.opacity = 1;
+				
+                setTimeout(() => {
+                    preloader.style.opacity = 0;
+
+                    setTimeout(() => {
+                        index++;
+                        displaySequence();
+                    }, 1600);
+                }, 1600);
+            } else {
+				body.style.display = 'block';
+                preloader.style.display = 'none';
+                content.style.opacity = '1';
+				content.style.height = 'unset';
+            }
+        }
+        window.addEventListener('load', () => {
+            displaySequence();
+        });
+    </script>
    <script src="https://unpkg.com/scrollreveal"></script>
    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
 
