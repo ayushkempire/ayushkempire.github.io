@@ -694,6 +694,7 @@ span {
 footer a:hover,
 footer a:active {
     color: var(--main-color);
+
 }
 
 .footer-iconTop a {
