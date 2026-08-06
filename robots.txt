@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /portfolio/edu.zip
+Disallow: /portfolio/vid-stream.zip
+Sitemap: https://ayushkempire.github.io/sitemap.xml
