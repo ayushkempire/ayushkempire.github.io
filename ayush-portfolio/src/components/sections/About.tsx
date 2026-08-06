@@ -1,7 +1,8 @@
 "use client";
 
-import { useEffect, useState } from "react";
-import { about, education } from "@/lib/data";
+import { useEffect, useRef, useState } from "react";
+import { animate, useInView } from "motion/react";
+import { useContent } from "@/components/ContentProvider";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 
 type GithubStats = {
@@ -11,7 +12,28 @@ type GithubStats = {
   topLanguages: string[];
 };
 
+/** Counts up from 0 when scrolled into view. */
+function CountUp({ value }: { value: number }) {
+  const ref = useRef<HTMLSpanElement>(null);
+  const inView = useInView(ref, { once: true, margin: "-40px" });
+
+  useEffect(() => {
+    if (!inView || !ref.current) return;
+    const controls = animate(0, value, {
+      duration: 1.4,
+      ease: [0.22, 1, 0.36, 1],
+      onUpdate: (v) => {
+        if (ref.current) ref.current.textContent = String(Math.round(v));
+      },
+    });
+    return () => controls.stop();
+  }, [inView, value]);
+
+  return <span ref={ref}>0</span>;
+}
+
 export default function About() {
+  const { about, education } = useContent();
   const [stats, setStats] = useState<GithubStats | null>(null);
 
   useEffect(() => {
@@ -22,8 +44,8 @@ export default function About() {
   }, []);
 
   return (
-    <section id="about" className="px-6 py-28 md:px-12 md:py-40">
-      <SectionHeading index="01" title="Profile" />
+    <section id="about" className="px-6 py-20 md:px-12 md:py-28">
+      <SectionHeading index="01" title="Profile" endpoint="/profile" />
 
       <div className="grid gap-16 lg:grid-cols-12">
         <div className="lg:col-span-7">
@@ -39,6 +61,27 @@ export default function About() {
               </Reveal>
             ))}
           </div>
+
+          <Reveal delay={2} className="mt-12">
+            <h3 className="mb-4 font-mono text-xs uppercase tracking-[0.2em] text-signal">
+              Off duty
+            </h3>
+            <div className="flex flex-wrap gap-2">
+              {["Guitar", "Music discovery", "Mountain hiking", "Design & creativity"].map(
+                (interest) => (
+                  <span
+                    key={interest}
+                    className="border border-line px-4 py-2 text-sm text-bone-dim transition-colors duration-300 hover:border-signal hover:text-bone"
+                  >
+                    {interest}
+                  </span>
+                )
+              )}
+            </div>
+            <blockquote className="mt-10 max-w-md border-l-2 border-signal pl-6 font-serif text-2xl italic leading-snug">
+              Ship it clean, scale it right — then take the scenic route home.
+            </blockquote>
+          </Reveal>
         </div>
 
         <div className="lg:col-span-5">
@@ -85,8 +128,13 @@ export default function About() {
                   { label: "Stars", value: stats.stars },
                   { label: "Followers", value: stats.followers },
                 ].map((stat) => (
-                  <div key={stat.label} className="p-4 text-center">
-                    <p className="font-serif text-3xl italic">{stat.value}</p>
+                  <div
+                    key={stat.label}
+                    className="p-4 text-center transition-colors duration-300 hover:bg-signal/10"
+                  >
+                    <p className="font-serif text-3xl italic">
+                      <CountUp value={stat.value} />
+                    </p>
                     <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.2em] text-bone-dim">
                       {stat.label}
                     </p>

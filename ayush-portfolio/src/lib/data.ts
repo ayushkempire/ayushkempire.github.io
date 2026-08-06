@@ -69,13 +69,13 @@ export const education = [
 export const projects = [
   {
     index: "01",
-    title: "GyanSetu",
+    title: "Adhyay.ai",
     subtitle: "AI-powered EdTech Platform",
     description:
       "Multi-tenant EdTech platform with role-based dashboards for students, teachers, and admins. JWT auth, RBAC, adaptive self-assessment, and ML microservice integration for personalized learning — featuring an AI Tutor and Quiz Generator.",
     stack: ["Next.js 14", "Node.js", "TypeScript", "PostgreSQL"],
     year: "2026",
-    link: null,
+    link: "https://adhyay.ai" as string | null,
   },
   {
     index: "02",

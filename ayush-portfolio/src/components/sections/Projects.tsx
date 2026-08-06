@@ -2,15 +2,16 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "motion/react";
-import { projects } from "@/lib/data";
+import { useContent } from "@/components/ContentProvider";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 
 export default function Projects() {
+  const { projects } = useContent();
   const [active, setActive] = useState<string | null>(null);
 
   return (
-    <section id="projects" className="px-6 py-28 md:px-12 md:py-40">
-      <SectionHeading index="03" title="Selected Work" />
+    <section id="projects" className="px-6 py-20 md:px-12 md:py-28">
+      <SectionHeading index="03" title="Selected Work" endpoint="/projects" />
 
       <div className="border-t border-line">
         {projects.map((project) => {
@@ -65,7 +66,7 @@ export default function Projects() {
                               </span>
                             ))}
                           </div>
-                          {project.link && (
+                          {project.link ? (
                             <a
                               href={project.link}
                               target="_blank"
@@ -77,6 +78,11 @@ export default function Projects() {
                                 ↗
                               </span>
                             </a>
+                          ) : (
+                            <p className="mt-6 inline-flex items-center gap-2 font-mono text-[11px] uppercase tracking-[0.2em] text-bone-dim">
+                              <span className="size-1.5 rounded-full bg-signal" />
+                              In development — private codebase
+                            </p>
                           )}
                         </div>
                       </div>

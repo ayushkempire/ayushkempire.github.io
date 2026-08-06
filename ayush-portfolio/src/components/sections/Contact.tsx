@@ -1,17 +1,29 @@
 "use client";
 
 import { useState } from "react";
-import { site } from "@/lib/data";
+import { useContent } from "@/components/ContentProvider";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 
 type Status = "idle" | "sending" | "sent" | "error";
 
 const inputClass =
-  "w-full border-b border-line bg-transparent py-4 text-lg placeholder:text-bone-dim/50 focus:border-signal transition-colors duration-300";
+  "w-full border-b border-line bg-transparent py-4 text-lg placeholder:text-bone-dim/70 focus:border-signal transition-colors duration-300";
 
 export default function Contact() {
+  const { site } = useContent();
   const [status, setStatus] = useState<Status>("idle");
   const [error, setError] = useState<string | null>(null);
+  const [copied, setCopied] = useState(false);
+
+  async function copyEmail() {
+    try {
+      await navigator.clipboard.writeText(site.email);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch {
+      /* clipboard unavailable — mailto link still works */
+    }
+  }
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,8 +56,8 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="px-6 py-28 md:px-12 md:py-40">
-      <SectionHeading index="05" title="Contact" />
+    <section id="contact" className="glow-top px-6 py-20 md:px-12 md:py-28">
+      <SectionHeading index="05" title="Contact" endpoint="/contact" />
 
       <div className="grid gap-16 lg:grid-cols-12">
         <div className="lg:col-span-5">
@@ -53,20 +65,56 @@ export default function Contact() {
             <h3 className="font-serif text-4xl leading-tight md:text-6xl">
               Let&apos;s build
               <br />
-              <em className="text-signal">something.</em>
+              <em className="text-ember-gradient">something.</em>
             </h3>
             <p className="mt-6 max-w-sm leading-relaxed text-bone-dim">
               Have a project in mind, a role to fill, or just want to talk systems
               architecture? My inbox is open.
             </p>
             <div className="mt-10 space-y-3 font-mono text-sm">
-              <a href={`mailto:${site.email}`} className="link-sweep block w-fit">
-                {site.email}
-              </a>
+              <div className="flex items-center gap-3">
+                <a href={`mailto:${site.email}`} className="link-sweep block w-fit">
+                  {site.email}
+                </a>
+                <button
+                  onClick={copyEmail}
+                  className="border border-line px-2 py-1 text-[10px] uppercase tracking-widest text-bone-dim transition-colors duration-300 hover:border-signal hover:text-signal"
+                  aria-label="Copy email address"
+                >
+                  {copied ? "Copied ✓" : "Copy"}
+                </button>
+              </div>
               <a href={`tel:${site.phone}`} className="link-sweep block w-fit text-bone-dim">
                 {site.phone}
               </a>
             </div>
+
+            <div className="mt-10">
+              <h4 className="mb-4 font-mono text-[10px] uppercase tracking-[0.25em] text-bone-dim">
+                Elsewhere
+              </h4>
+              <div className="flex flex-wrap gap-2">
+                {site.socials.map((social) => (
+                  <a
+                    key={social.label}
+                    href={social.href}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="border border-line px-4 py-2 font-mono text-xs text-bone-dim transition-colors duration-300 hover:border-signal hover:text-signal"
+                  >
+                    {social.label} ↗
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            <p className="mt-10 flex items-center gap-2 font-mono text-[10px] uppercase tracking-[0.25em] text-bone-dim">
+              <span className="relative flex size-2">
+                <span className="absolute inline-flex size-full animate-ping rounded-full bg-signal opacity-60" />
+                <span className="relative inline-flex size-2 rounded-full bg-signal" />
+              </span>
+              Usually replies within 24 hours · IST
+            </p>
           </Reveal>
         </div>
 

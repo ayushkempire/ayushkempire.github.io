@@ -1,12 +1,24 @@
 "use client";
 
-import { skills, certifications } from "@/lib/data";
+import { motion } from "motion/react";
+import { useContent } from "@/components/ContentProvider";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 
+const chipList = {
+  visible: { transition: { staggerChildren: 0.05 } },
+  hidden: {},
+};
+
+const chip = {
+  hidden: { opacity: 0, y: 14 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as const } },
+};
+
 export default function Skills() {
+  const { skills, certifications } = useContent();
   return (
-    <section id="skills" className="px-6 py-28 md:px-12 md:py-40">
-      <SectionHeading index="04" title="Stack & Credentials" />
+    <section id="skills" className="px-6 py-20 md:px-12 md:py-28">
+      <SectionHeading index="04" title="Stack & Credentials" endpoint="/stack" />
 
       <div className="grid gap-x-12 gap-y-14 md:grid-cols-2 lg:grid-cols-3">
         {skills.map((group, i) => (
@@ -15,16 +27,23 @@ export default function Skills() {
               {group.group}
               <span className="h-px flex-1 bg-line" />
             </h3>
-            <ul className="flex flex-wrap gap-2">
+            <motion.ul
+              className="flex flex-wrap gap-2"
+              variants={chipList}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, margin: "-60px" }}
+            >
               {group.items.map((item) => (
-                <li
+                <motion.li
                   key={item}
-                  className="border border-line px-4 py-2 text-sm text-bone-dim transition-colors duration-300 hover:border-signal hover:text-bone"
+                  variants={chip}
+                  className="border border-line px-4 py-2 text-sm text-bone-dim transition-colors duration-300 hover:border-signal hover:bg-signal/10 hover:text-bone"
                 >
                   {item}
-                </li>
+                </motion.li>
               ))}
-            </ul>
+            </motion.ul>
           </Reveal>
         ))}
       </div>

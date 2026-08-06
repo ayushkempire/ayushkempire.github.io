@@ -1,12 +1,13 @@
 "use client";
 
-import { experience } from "@/lib/data";
+import { useContent } from "@/components/ContentProvider";
 import { Reveal, SectionHeading } from "@/components/Reveal";
 
 export default function Experience() {
+  const { experience, site } = useContent();
   return (
-    <section id="experience" className="px-6 py-28 md:px-12 md:py-40">
-      <SectionHeading index="02" title="Experience" />
+    <section id="experience" className="px-6 py-20 md:px-12 md:py-28">
+      <SectionHeading index="02" title="Experience" endpoint="/experience" />
 
       <div className="space-y-24">
         {experience.map((job) => (
@@ -32,6 +33,17 @@ export default function Experience() {
                       </span>
                     ))}
                   </div>
+                  <a
+                    href={site.resume}
+                    target="_blank"
+                    rel="noreferrer"
+                    className="group mt-8 inline-flex items-center gap-2 font-mono text-xs uppercase tracking-[0.2em] text-signal"
+                  >
+                    Full resume
+                    <span className="transition-transform duration-300 group-hover:translate-x-1 group-hover:-translate-y-1">
+                      ↗
+                    </span>
+                  </a>
                 </Reveal>
               </div>
             </div>

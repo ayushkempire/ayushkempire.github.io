@@ -22,7 +22,7 @@ const jetbrains = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://ayushkempire.dev"),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? "https://ayushkempire.vercel.app"),
   title: "Ayush Kapoor — Backend Developer",
   description:
     "Backend Developer at CAIR, IIT Mandi. Building scalable full-stack systems with Node.js, TypeScript, PostgreSQL, and Next.js.",

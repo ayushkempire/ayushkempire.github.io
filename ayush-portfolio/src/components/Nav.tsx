@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from "motion/react";
-import { site } from "@/lib/data";
+import { useContent } from "@/components/ContentProvider";
+import ScrambleText from "@/components/ScrambleText";
 
 const links = [
   { label: "Profile", href: "#about", index: "01" },
@@ -13,14 +14,33 @@ const links = [
 ];
 
 export default function Nav() {
+  const { site } = useContent();
   const [open, setOpen] = useState(false);
   const [hidden, setHidden] = useState(false);
+  const [active, setActive] = useState<string | null>(null);
   const { scrollY } = useScroll();
 
   useMotionValueEvent(scrollY, "change", (latest) => {
     const prev = scrollY.getPrevious() ?? 0;
     setHidden(latest > prev && latest > 200 && !open);
   });
+
+  // scrollspy — highlight the section currently in view
+  useEffect(() => {
+    const sections = links
+      .map((link) => document.querySelector(link.href))
+      .filter(Boolean) as Element[];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        for (const entry of entries) {
+          if (entry.isIntersecting) setActive(`#${entry.target.id}`);
+        }
+      },
+      { rootMargin: "-35% 0px -55% 0px" }
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, []);
 
   return (
     <>
@@ -29,20 +49,32 @@ export default function Nav() {
         animate={{ y: hidden ? "-110%" : "0%" }}
         transition={{ duration: 0.4, ease: [0.22, 1, 0.36, 1] }}
       >
-        <a href="#top" className="font-mono text-sm uppercase tracking-[0.25em]">
-          AK<span className="text-signal">.</span>
+        <a href="#top" className="font-mono text-sm lowercase tracking-[0.2em]">
+          @ayushkempire<span className="text-signal"></span>
         </a>
         <nav className="hidden items-center gap-8 md:flex">
-          {links.map((link) => (
-            <a
-              key={link.href}
-              href={link.href}
-              className="link-sweep font-mono text-xs uppercase tracking-[0.2em]"
-            >
-              <span className="mr-1 text-signal">{link.index}</span>
-              {link.label}
-            </a>
-          ))}
+          {links.map((link) => {
+            const isActive = active === link.href;
+            return (
+              <a
+                key={link.href}
+                href={link.href}
+                className={`link-sweep relative font-mono text-xs uppercase tracking-[0.2em] transition-opacity duration-300 ${
+                  active && !isActive ? "opacity-50 hover:opacity-100" : ""
+                }`}
+              >
+                <span className="mr-1 text-signal">{link.index}</span>
+                <ScrambleText text={link.label} />
+                {isActive && (
+                  <motion.span
+                    layoutId="nav-active"
+                    className="absolute -bottom-1.5 left-0 h-px w-full bg-signal"
+                    transition={{ type: "spring", stiffness: 380, damping: 32 }}
+                  />
+                )}
+              </a>
+            );
+          })}
         </nav>
         <button
           onClick={() => setOpen(!open)}
